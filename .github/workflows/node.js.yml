@@ -23,9 +23,4 @@ jobs:
 
     - run: npm ci
 
-    - name: Create .env file
-      run: |
-        printf "%s" "${{ secrets.PROD_ENV_FILE }}" > .env
-
-    - name: Check .env file (Temporary Debug)
-      run: cat .env  # REMOVE THIS AFTER TESTING
+   
