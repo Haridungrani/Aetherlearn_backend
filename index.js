@@ -15,11 +15,12 @@ const PORT = process.env.PORT || 4000;
 //database connect
 dbConnect();
 
+
 //middlewares
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin: "http://23.23.56.180:3000",
+    origin: "*", // Allows all origins
     methods: "GET,POST,PUT,DELETE",
     allowedHeaders: "Content-Type,Authorization",
     credentials: true
