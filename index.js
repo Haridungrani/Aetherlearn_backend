@@ -18,10 +18,12 @@ dbConnect();
 //middlewares
 app.use(express.json());
 app.use(cookieParser());
-app.use(
-    cors()
-);
-
+app.use(cors({
+    origin: "http://23.23.56.180:3000",
+    methods: "GET,POST,PUT,DELETE",
+    allowedHeaders: "Content-Type,Authorization",
+    credentials: true
+}));
 
 //routes
 app.use("/api/v1/auth", userRoutes);
