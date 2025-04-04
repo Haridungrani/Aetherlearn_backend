@@ -34,6 +34,12 @@ app.get("/", (req, res) => {
 	});
 });
 
+app.get("/apt/testing", (req, res) => {
+	return res.json({
+		success:true,
+		message:'Your server is up and running and this is bhagu...'
+	});
+});
 
 app.listen(PORT, () => {
 	console.log(`App is running at ${PORT}`);
