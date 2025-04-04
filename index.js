@@ -34,7 +34,7 @@ app.get("/", (req, res) => {
 	});
 });
 
-app.get("/apt/testing", (req, res) => {
+app.get("/api/testing", (req, res) => {
 	return res.json({
 		success:true,
 		message:'Your server is up and running and this is bhagu...'
