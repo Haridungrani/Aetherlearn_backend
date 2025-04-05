@@ -44,6 +44,20 @@ app.get("/api/testing", (req, res) => {
 	});
 });
 
+app.get("/api/new1", (req, res) => {
+	return res.json({
+		success:true,
+		message:'Your server is up and running and this is bhargav dungrani'
+	});
+});
+
+app.get("/api/new2", (req, res) => {
+	return res.json({
+		success:true,
+		message:'Your server is up and running and this is ci cd pipeline automation:website deplyment'
+	});
+});
+
 app.listen(PORT, () => {
 	console.log(`App is running at ${PORT}`);
   });
